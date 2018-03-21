@@ -1,0 +1,311 @@
+// Styles for the table
+
+.tabla {
+    width: 100%;
+    margin: 0  0 1em 0;
+    border-left: 1px solid $color-borde-tabla;
+    border-right: 1px solid $color-borde-tabla;
+
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 1;
+        order: calc(var(--order) * var(--sort-order, -1));
+        height: 39px;
+        align-items: center;
+        border-bottom: 1px solid $color-borde-tabla;
+
+        &--header {
+            justify-content: flex-start;
+            background: $color-fondo-cabecera-tabla;
+
+            .table-cell {
+                position: relative;
+                display: flex;
+                user-select: none;
+            }
+        }
+
+        .table-orderer {
+            display: none;
+        }
+
+        .table-sorter {
+            border-bottom: 1px dotted;
+            @include transition(all, .3s);
+
+            &:hover {
+                color: #FFF;
+            }
+        }
+
+        .table-sorter:before,
+        .table-orderer:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          cursor: pointer;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.tabla-plantilla {
+    font-size: 12px;
+
+    .tabla__row--header > .tabla-plantilla__dorsal {
+        background: none;
+    }
+
+    .tabla__row {
+        background: #FFF;
+    }
+
+    .tabla__row--header {
+        background: $color-fondo-cabecera-tabla;
+    }
+
+    &__dorsal {
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 27%;
+        }
+
+        @include media("<=phone") {
+
+            > .visible-xs {
+                margin-left: 15%;
+            }
+        }
+    }
+
+    &__jugador {
+        width: 20%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        label {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include media("<=phone") {
+            width: 30%;
+        }
+    }
+
+    &__minutos {
+        width: 10%;
+
+        > label:first-child {
+            margin-left: 35%;
+        }
+
+        @include media("<=phone") {
+            width: 12%;
+
+            > label:first-child {
+                margin-left: 15%;
+            }
+        }
+    }
+
+    &__titular{
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 24%;
+        }
+
+        @include media("<=phone") {
+            width: 10%;
+
+            > .visible-xs {
+                margin-left: 15%;
+            }
+        }
+    }
+
+    &__partidos{
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 38%;
+        }
+
+        @include media("<=phone") {
+
+        > label:first-child {
+                margin-left: 10%;
+            }
+        }
+    }
+
+    &__goles {
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 27%;
+        }
+
+        @include media("<=phone") {
+
+            > .visible-xs {
+                margin-left: 15%;
+            }
+        }
+    }
+
+    &__asistencias {
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 29%;
+        }
+
+        @include media("<=phone") {
+
+            > .visible-xs {
+                margin-left: 15%;
+            }
+        }
+    }
+
+    &__tama {
+        width: 5%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 35%;
+        }
+
+        @include media("<=phone") {
+
+        > label:first-child {
+                margin-left: 5%;
+            }
+        }
+    }
+
+    &__troj {
+        width: 5%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 35%;
+        }
+
+        @include media("<=phone") {
+
+        > label:first-child {
+                margin-left: 5%;
+            }
+        }
+    }
+
+    &__pos {
+        width: 10%;
+        text-align: center;
+
+        > label:first-child {
+            margin-left: 21%;
+        }
+
+        @include media("<=tablet") {
+            display: none !important;
+        }
+    }
+
+    .red-card {
+        color: red;
+    }
+
+    .yellow-card {
+        color: gold;
+    }
+}
+
+// Styles for hiding the radio buttons
+
+.seccion-equipo-plantilla {
+    >input[type="radio"] {
+        position: fixed;
+        left: 0;
+        right: 0;
+        clip: rect(1px,1px,1px,1px);
+        visibility: hidden;
+    }
+}
+
+// The sorting magic
+
+#sort-by-min:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-min);
+}
+
+#sort-by-inicio:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-inicio);
+}
+
+#sort-by-partidos:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-partidos);
+}
+
+#sort-by-goles:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-goles);
+}
+
+#sort-by-asist:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-asist);
+}
+
+#sort-by-tama:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-tama);
+}
+
+#sort-by-troj:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-troj);
+}
+
+#sort-by-pos:checked ~ .tabla-plantilla > .tabla__body > .tabla__row {
+    --order: var(--order-by-pos);
+}
+
+#sort-ascending:checked + .tabla-plantilla {
+  --sort-order: 1;
+}
+
+#sort-by-num:checked ~ #sort-ascending:checked + .tabla-plantilla > .tabla__body {
+  flex-direction: column-reverse;
+}
+
+#sort-by-num:checked ~ .tabla-plantilla .table-sorter[for=sort-by-num] ~ .table-orderer,
+#sort-by-min:checked ~ .tabla-plantilla .table-sorter[for=sort-by-min] ~ .table-orderer,
+#sort-by-inicio:checked ~ .tabla-plantilla .table-sorter[for=sort-by-inicio] ~ .table-orderer,
+#sort-by-partidos:checked ~ .tabla-plantilla .table-sorter[for=sort-by-partidos] ~ .table-orderer,
+#sort-by-goles:checked ~ .tabla-plantilla .table-sorter[for=sort-by-goles] ~ .table-orderer,
+#sort-by-asist:checked ~ .tabla-plantilla .table-sorter[for=sort-by-asist] ~ .table-orderer,
+#sort-by-tama:checked ~ .tabla-plantilla .table-sorter[for=sort-by-tama] ~ .table-orderer,
+#sort-by-troj:checked ~ .tabla-plantilla .table-sorter[for=sort-by-troj] ~ .table-orderer,
+#sort-by-pos:checked ~ .tabla-plantilla .table-sorter[for=sort-by-pos] ~ .table-orderer {
+  display: inline;
+}
+
+#sort-ascending:checked + .tabla-plantilla .table-orderer[for=sort-ascending],
+#sort-ascending:not(:checked) + .tabla-plantilla .table-orderer[for=sort-descending] {
+  display: none !important;
+}
