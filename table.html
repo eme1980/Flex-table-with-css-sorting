@@ -1,0 +1,222 @@
+<div class="seccion-equipo-plantilla">	
+		<h2 class="cabecera-nueva">Plantilla del Valencia</h2>
+        
+    <input type="radio" name="sort" id="sort-by-num">
+    <input type="radio" name="sort" id="sort-by-nombre" checked="checked">
+    <input type="radio" name="sort" id="sort-by-min">
+    <input type="radio" name="sort" id="sort-by-partidos">
+    <input type="radio" name="sort" id="sort-by-inicio">
+    <input type="radio" name="sort" id="sort-by-goles">
+    <input type="radio" name="sort" id="sort-by-asist">
+    <input type="radio" name="sort" id="sort-by-tama">
+    <input type="radio" name="sort" id="sort-by-troj">
+    <input type="radio" name="sort" id="sort-by-pos">
+    <input type="radio" name="sort-order" id="sort-descending" checked="checked">
+    <input type="radio" name="sort-order" id="sort-ascending">
+    
+    <div class="tabla tabla-plantilla">
+	    <div class="tabla__row tabla__row--header">
+		    <div class="table-cell tabla-plantilla__dorsal">	
+		    	<label for="sort-by-num" class="table-sorter hidden-xs" title="Dorsal">Dorsal</label>
+		    	<label for="sort-by-num" class="table-sorter visible-xs" title="Dorsal">Nº</label>
+		    	<label class="table-orderer" for="sort-ascending">↓</label>
+		    	<label class="table-orderer" for="sort-descending">↑</label>
+		    </div>
+		    <div class="table-cell tabla-plantilla__jugador">	
+		    	<label for="sort-by-nombre" title="Jugador">Jugador</label>
+			  </div>
+		    <div class="table-cell tabla-plantilla__minutos">	
+		    	<label for="sort-by-min" class="table-sorter" title="Minutos jugados">Min.</label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+			  <div class="table-cell tabla-plantilla__partidos">	
+		    	<label for="sort-by-partidos" class="table-sorter" title="Partidos jugados">P.J.</label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+		    <div class="table-cell tabla-plantilla__titular">	
+		    	<label for="sort-by-inicio" class="table-sorter hidden-xs" title="Partidos como titular">Titular</label>
+		    	<label for="sort-by-num" class="table-sorter visible-xs" title="Partidos como titular">Tit.</label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+		    <div class="table-cell tabla-plantilla__goles">
+		    	<label for="sort-by-goles" class="table-sorter hidden-xs" title="Goles anotados">Goles</label>
+		    	<label for="sort-by-goles" class="table-sorter visible-xs" title="Goles anotados">Gol</label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+		    <div class="table-cell tabla-plantilla__asistencias">
+		    	<label for="sort-by-asist" class="table-sorter hidden-xs" title="Asistencias dadas">Asist.</label>
+		    	<label for="sort-by-asist" class="table-sorter visible-xs" title="Asistencias dadas">As.</label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+        <div class="table-cell tabla-plantilla__tama">	
+          <label for="sort-by-tama" class="table-sorter" title="Tarjetas amarillas"><i class="fa fa-square yellow-card" title="tarjetas amarillas"></i></label>
+			    <label class="table-orderer" for="sort-ascending">↓</label>
+			    <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+			  <div class="table-cell tabla-plantilla__troj">
+		    	<label for="sort-by-troj" class="table-sorter" title="Tarjetas rojas"><i class="fa fa-square red-card" title="tarjetas amarillas"></i></label>
+				  <label class="table-orderer" for="sort-ascending">↓</label>
+				  <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+			  <div class="table-cell tabla-plantilla__pos">
+          <label for="sort-by-pos" class="table-sorter" title="Posición">Posición</label>
+				  <label class="table-orderer" for="sort-ascending">↓</label>
+				  <label class="table-orderer" for="sort-descending">↑</label>
+			  </div>
+		  </div>
+		  <div class="tabla__body">
+        	
+	      <div class="tabla__row" style="--order-by-num: 1;
+	    								--order-by-min: 90;
+	    								--order-by-partidos: 1;
+	    								--order-by-inicio: 1;
+	    								--order-by-goles: 0;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 1;
+	    								--order-by-troj: 0;
+	    								--order-by-pos: 1">
+          <b class="tabla-plantilla__dorsal">1</b>
+          <b class="tabla-plantilla__jugador">Jaume Doménech</b>
+          <span class="tabla-plantilla__minutos">90</span>
+          <span class="tabla-plantilla__partidos">1</span>
+          <span class="tabla-plantilla__titular">1</span>
+          <span class="tabla-plantilla__goles">0</span>
+          <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">1</span>
+          <span class="tabla-plantilla__troj">0</span>
+          <span class="tabla-plantilla__pos">Portero</span>
+        </div>
+    
+	      <div class="tabla__row" style="--order-by-num: 3;
+	    								--order-by-min: 1014;
+	    								--order-by-partidos: 13;
+	    								--order-by-inicio: 11;
+	    								--order-by-goles: 0;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 1;
+	    								--order-by-troj: 1;
+	    								--order-by-pos: 2">
+          <b class="tabla-plantilla__dorsal">3</b>
+		      <b class="tabla-plantilla__jugador">Rúben Vezo</b>
+		      <span class="tabla-plantilla__minutos">1014</span>
+		      <span class="tabla-plantilla__partidos">13</span>
+		      <span class="tabla-plantilla__titular">11</span>
+		      <span class="tabla-plantilla__goles">0</span>
+		      <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">1</span>
+          <span class="tabla-plantilla__troj">1</span>
+          <span class="tabla-plantilla__pos">Defensa</span>
+	      </div>
+    
+	      <div class="tabla__row" style="--order-by-num: 4;
+	    								--order-by-min: 1103;
+	    								--order-by-partidos: 14;
+	    								--order-by-inicio: 12;
+	    								--order-by-goles: 0;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 4;
+	    								--order-by-troj: 0;
+	    								--order-by-pos: 2">
+          <b class="tabla-plantilla__dorsal">4</b>
+          <b class="tabla-plantilla__jugador">J. Murillo</b>
+          <span class="tabla-plantilla__minutos">1103</span>
+          <span class="tabla-plantilla__partidos">14</span>
+          <span class="tabla-plantilla__titular">12</span>
+          <span class="tabla-plantilla__goles">0</span>
+          <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">4</span>
+          <span class="tabla-plantilla__troj">0</span>
+          <span class="tabla-plantilla__pos">Defensa</span>
+	      </div>
+    
+	      <div class="tabla__row" style="--order-by-num: 5;
+	    								--order-by-min: 2044;
+	    								--order-by-partidos: 24;
+	    								--order-by-inicio: 23;
+	    								--order-by-goles: 0;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 5;
+	    								--order-by-troj: 1;
+	    								--order-by-pos: 2">
+          <b class="tabla-plantilla__dorsal">5</b>
+          <b class="tabla-plantilla__jugador">Gabriel Paulista</b>
+          <span class="tabla-plantilla__minutos">2044</span>
+          <span class="tabla-plantilla__partidos">24</span>
+          <span class="tabla-plantilla__titular">23</span>
+          <span class="tabla-plantilla__goles">0</span>
+          <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">5</span>
+          <span class="tabla-plantilla__troj">1</span>
+          <span class="tabla-plantilla__pos">Defensa</span>
+	      </div>
+    
+	      <div class="tabla__row" style="--order-by-num: 6;
+	    								--order-by-min: 309;
+	    								--order-by-partidos: 12;
+	    								--order-by-inicio: 3;
+	    								--order-by-goles: 0;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 1;
+	    								--order-by-troj: 0;
+	    								--order-by-pos: 3">
+          <b class="tabla-plantilla__dorsal">6</b>
+          <b class="tabla-plantilla__jugador">N. Maksimovic</b>
+          <span class="tabla-plantilla__minutos">309</span>
+          <span class="tabla-plantilla__partidos">12</span>
+          <span class="tabla-plantilla__titular">3</span>
+          <span class="tabla-plantilla__goles">0</span>
+          <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">1</span>
+          <span class="tabla-plantilla__troj">0</span>
+          <span class="tabla-plantilla__pos">Medio</span>
+	      </div>
+    
+        <div class="tabla__row" style="--order-by-num: 7;
+	    								--order-by-min: 1692;
+	    								--order-by-partidos: 24;
+	    								--order-by-inicio: 18;
+	    								--order-by-goles: 4;
+	    								--order-by-asist: 7;
+	    								--order-by-tama: 1;
+	    								--order-by-troj: 0;
+	    								--order-by-pos: 3">
+          <b class="tabla-plantilla__dorsal">7</b>
+          <b class="tabla-plantilla__jugador">Gonçalo Guedes</b>
+          <span class="tabla-plantilla__minutos">1692</span>
+          <span class="tabla-plantilla__partidos">24</span>
+          <span class="tabla-plantilla__titular">18</span>
+          <span class="tabla-plantilla__goles">4</span>
+          <span class="tabla-plantilla__asistencias">7</span>
+          <span class="tabla-plantilla__tama">1</span>
+          <span class="tabla-plantilla__troj">0</span>
+          <span class="tabla-plantilla__pos">Medio</span>
+	      </div>
+    
+	      <div class="tabla__row" style="--order-by-num: 8;
+	    								--order-by-min: 282;
+	    								--order-by-partidos: 7;
+	    								--order-by-inicio: 3;
+	    								--order-by-goles: 1;
+	    								--order-by-asist: 0;
+	    								--order-by-tama: 1;
+	    								--order-by-troj: 0;
+	    								--order-by-pos: 4">
+          <b class="tabla-plantilla__dorsal">8</b>
+          <b class="tabla-plantilla__jugador">L. Vietto</b>
+          <span class="tabla-plantilla__minutos">282</span>
+          <span class="tabla-plantilla__partidos">7</span>
+          <span class="tabla-plantilla__titular">3</span>
+          <span class="tabla-plantilla__goles">1</span>
+          <span class="tabla-plantilla__asistencias">0</span>
+          <span class="tabla-plantilla__tama">1</span>
+          <span class="tabla-plantilla__troj">0</span>
+          <span class="tabla-plantilla__pos">Delantero</span>
+	      </div>
+      </div>
+    </div>
+	</div>
